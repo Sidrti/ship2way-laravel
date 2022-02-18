@@ -131,6 +131,14 @@ Route::get('/product/inventory',function(){
     return view('layouts.product.inventory');
 })->middleware("auth");
 
+Route::get('/product/voidProduct',function(){
+    return view('layouts.product.voidProduct');
+})->middleware("auth");
+
+Route::get('/product/availableProduct',function(){
+    return view('layouts.product.availableProduct');
+})->middleware("auth");
+
 Route::get('/orders',function(){
     return view('order');
 });
