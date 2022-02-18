@@ -30,6 +30,18 @@
         <p>Inventory</p>
     </a>
 </li>
+<li class="nav-item">
+    <a href="{{url('product/voidProduct')}}" class="nav-link {{ request()->is('product/voidProduct*') ? 'active' : '' }}">
+        {{-- <i class="nav-icon fas fa-home"></i> --}}
+        <p>Void Product Report</p>
+    </a>
+</li>
+<li class="nav-item">
+    <a href="{{url('product/availableProduct')}}" class="nav-link {{ request()->is('product/availableProduct*') ? 'active' : '' }}">
+        {{-- <i class="nav-icon fas fa-home"></i> --}}
+        <p>Available Product Report</p>
+    </a>
+</li>
 @include('layouts.modal.exportModal')
 
 {{-- @push('css')

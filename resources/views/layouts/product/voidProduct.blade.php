@@ -338,18 +338,9 @@
                       <th class="alias_column">Product Name</th>
                       <th class="alias_column">Product Type</th>
                       <th class="alias_column">Product description/SKU</th>
-                      <th class="alias_column"> Bin rack #</th>
-                      <th class="alias_column">Warehouse number</th>
-                      <th class="alias_column">	Shipping fee</th>
-                      <th class="alias_column">Manufacturer/Origin Country</th>
-                      <th class="alias_column">Carrier</th>
-                      <th class="alias_column">Original price</th>
-                      <th class="alias_column"> Available Unit</th>
-                      <th class="alias_column">Shipping status</th>
-                      <th class="alias_column">FOB price/Sale Price</th>
-                      <th class="alias_column"> Arriving Stock Date</th>
-                      <th class="alias_column"> Arriving Stock Qty</th>
-                     
+                      <th class="alias_column">date of incoming product</th>
+                      <th class="alias_column">stock</th>
+                      <th class="alias_column">date of discontinue</th>                     
                     
                     </tr>
                   </thead>
@@ -363,17 +354,9 @@
                       <td class="alias_column">Shoes</td>
                       <td class="sku_column">Footwear</td>
                       <td>Footwaer Product</td>
-                      <td>R5678</td>
-                      <td>H89-90</td>
-                      <td>$56</td>
-                      <td>India</td>
-                      <td class="avaliable_column">Not Yet</td>
-                      <td>$33.78</td>
-                      <td>678</td>
-                      <td class="avaliable_column">Hold</td>
-                      <td>$33.78</td>
-                      <td>21-3-2021</td>
-                      <td>67</td>
+                      <td>2-10-22</td>
+                      <td>90</td>
+                      <td>2-12-22</td>
                       
                     </tr>
                     <tr>
@@ -385,17 +368,9 @@
                       <td class="alias_column">Shoes</td>
                       <td class="sku_column">Footwear</td>
                       <td>Footwaer Product</td>
-                      <td>R5678</td>
-                      <td>H89-90</td>
-                      <td>$56</td>
-                      <td>India</td>
-                      <td class="avaliable_column">Not Yet</td>
-                      <td>$33.78</td>
-                      <td>678</td>
-                      <td class="avaliable_column">Hold</td>
-                      <td>$33.78</td>
-                      <td>21-3-2021</td>
-                      <td>67</td>
+                      <td>2-10-22</td>
+                      <td>90</td>
+                      <td>2-12-22</td>
                       
                     </tr>
                   </tbody>

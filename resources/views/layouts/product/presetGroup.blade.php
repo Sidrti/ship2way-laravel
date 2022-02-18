@@ -44,6 +44,10 @@
                     
                       <th>Preset Group</th>
                       <th>Stores</th>
+                      <th>Manufacturer</th>
+                      <th>Brand</th>
+                      <th>Size</th>
+                      <th>Color</th>
                       <th>Product Type Group</th>
                       <th>Dimension</th>
                       <th>Weight</th>
@@ -60,6 +64,10 @@
                     
                       <td>Shirt</td>
                       <td>Retail Store</td>
+                      <td>Densco</td>
+                      <td>Cobb</td>
+                      <td>L</td>
+                      <td>Black</td>
                       <td>Garment</td>
                       <td>45 x 56</td>
                       <td>3.78gms</td>
@@ -76,6 +84,10 @@
                       </td>
                       <td>Hoodie</td>
                       <td>Online Seller</td>
+                      <td>Densco</td>
+                      <td>Cobb</td>
+                      <td>L</td>
+                      <td>Black</td>
                       <td>Garment</td>
                       <td>56 x 78</td>
                       <td>3.78gms</td>

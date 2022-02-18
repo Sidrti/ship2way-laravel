@@ -131,7 +131,16 @@ Route::get('/product/inventory',function(){
     return view('layouts.product.inventory');
 })->middleware("auth");
 
-//Start of Customer Routes
+Route::get('/product/voidProduct',function(){
+    return view('layouts.product.voidProduct');
+})->middleware("auth");
+
+Route::get('/product/availableProduct',function(){
+    return view('layouts.product.availableProduct');
+})->middleware("auth");
+
+  
+  //Start of Customer Routes
 Route::get('/customer/customer',function(){
     return view('layouts.customer.customer');
 })->middleware("auth");

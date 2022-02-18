@@ -34,8 +34,11 @@
                   </th>
                   <th>Product Name</th>
                   <th>Dropship</th>
+                  <th>Manufacturer</th>
                   <th>Product Type</th>
                   <th>Stores</th>
+                  <th>Void Products</th>
+                  <th>Fullfilment Location</th>
                   <th>Action</th>
                   
                 </tr>
@@ -49,8 +52,11 @@
                   </td>
                   <td>Shoes</td>
                   <td>My store</td>
+                  <td>Densco</td>
                   <td>Footwear</td>
                   <td>Amazon</td>
+                  <td>N/A</td>
+                  <td>N/A</td>
                   <td>
                     <span class="badge badge-warning"  data-toggle="modal" data-target="#edit_rep"><i class="fa fa-edit"></i></span>
                     <span class="badge badge-danger"><i class="fa fa-trash"></i></span>
@@ -64,8 +70,11 @@
                   </td>
                   <td>Mobile</td>
                   <td>My store</td>
-                  <td>Homme Aplliances</td>
+                  <td>Densco</td>
+                  <td>Home Appliances</td>
                   <td>Ebay</td>
+                  <td>N/A</td>
+                  <td>N/A</td>
                   <td>
                     <span class="badge badge-warning"  data-toggle="modal" data-target="#edit_rep"><i class="fa fa-edit"></i></span>
                     <span class="badge badge-danger"><i class="fa fa-trash"></i></span>
