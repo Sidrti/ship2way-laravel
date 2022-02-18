@@ -139,9 +139,12 @@ Route::get('/product/availableProduct',function(){
     return view('layouts.product.availableProduct');
 })->middleware("auth");
 
-Route::get('/orders',function(){
-    return view('order');
-});
+  
+  //Start of Customer Routes
+Route::get('/customer/customer',function(){
+    return view('layouts.customer.customer');
+})->middleware("auth");
+//End of Customer Routes
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

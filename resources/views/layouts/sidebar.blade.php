@@ -17,7 +17,9 @@
                     @include('layouts.insightsMenu');
                 @elseif(Request::is('product/*'))
                     @include('layouts.productMenu');
-                @endif
+                @elseif(Request::is('customer/*'))
+                    @include('layouts.customerMenu');
+            @endif
             </ul>
         </nav>
     </div>
