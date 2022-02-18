@@ -49,7 +49,10 @@ $('#daterange-btn').daterangepicker(
     y :	"scroll" 	
   }});
 });
-
+$('#import').click(function() {
+  $('#importCustomer').modal('show');
+  
+});
 $('#export').click(function() {
   $('#modal').modal('show');
 });
