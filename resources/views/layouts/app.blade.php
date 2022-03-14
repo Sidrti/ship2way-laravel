@@ -31,7 +31,7 @@
                 <a class="nav-link {{ request()->is('insight*') ? 'active-top-navbar' : '' }}" href="/insight/overview">Insights</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{ request()->is('order*') ? 'active-top-navbar' : '' }}">Orders</a>
+                <a class="nav-link {{ request()->is('order*') ? 'active-top-navbar' : '' }}" href="/orders/awaitingPayment">Orders</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link {{ request()->is('shipment*') ? 'active-top-navbar' : '' }}" href="/shipment/shipped-recent">Shipments</a>

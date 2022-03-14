@@ -143,6 +143,31 @@ Route::get('/orders',function(){
     return view('order');
 });
 
+//orders start
+Route::get('/orders/awaitingPayment',function(){
+    return view('layouts.orders.awaitingPayment');
+})->middleware("auth");
+
+Route::get('/orders/awaitingShipment',function(){
+    return view('layouts.orders.awaitingShipment');
+})->middleware("auth");
+
+Route::get('/orders/cancelled',function(){
+    return view('layouts.orders.cancelled');
+})->middleware("auth");
+
+Route::get('/orders/manualOrders',function(){
+    return view('layouts.orders.manualOrders');
+})->middleware("auth");
+
+Route::get('/orders/onHold',function(){
+    return view('layouts.orders.onHold');
+})->middleware("auth");
+
+Route::get('/orders/shipped',function(){
+    return view('layouts.orders.shipped');
+})->middleware("auth");
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Auth::routes();
