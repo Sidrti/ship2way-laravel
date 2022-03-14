@@ -17,9 +17,14 @@
                     @include('layouts.insightsMenu');
                 @elseif(Request::is('product/*'))
                     @include('layouts.productMenu');
+
+                @elseif(Request::is('orders/*'))
+                    @include('layouts.ordersMenu');
+                
                 @elseif(Request::is('customer/*'))
                     @include('layouts.customerMenu');
             @endif
+
             </ul>
         </nav>
     </div>
