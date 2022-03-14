@@ -1519,6 +1519,7 @@ p {
  }
 .modal-backdrop {
     z-index: 1 !important;
+    width: 0vw !important;
 }
 #recent_shipments_info {
     font-size: 13px;

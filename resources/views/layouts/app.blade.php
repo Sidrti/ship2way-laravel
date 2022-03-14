@@ -40,7 +40,7 @@
                 <a class="nav-link {{ request()->is('product*') ? 'active-top-navbar' : '' }}" href="/product/product">Products</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{ request()->is('customer*') ? 'active-top-navbar' : '' }}">Customers</a>
+                <a class="nav-link {{ request()->is('customer*') ? 'active-top-navbar' : '' }}" href="/customer/customer">Customers</a>
             </li>
         </ul>
 
