@@ -118,13 +118,9 @@ Route::get('/product/product',function(){
     return view('layouts.product.product');
 })->middleware("auth");
 
-Route::get('/product/preset-group',function(){
-    return view('layouts.product.presetGroup');
-})->middleware("auth");
-
-Route::get('/product/reporting-category',function(){
-    return view('layouts.product.reportingCategory');
-})->middleware("auth");
+// Route::get('/product/preset-group',function(){
+//     return view('layouts.product.presetGroup');
+// })->middleware("auth");
 
 
 Route::get('/product/inventory',function(){
@@ -139,7 +135,13 @@ Route::get('/product/availableProduct',function(){
     return view('layouts.product.availableProduct');
 })->middleware("auth");
 
-  
+Route::post('/product/create-reporting-category', [App\Http\Controllers\Product\ReportingCategoryController::class, 'store'])->middleware('auth')->name('product.create-reporting-category');
+Route::post('/product/delete-reporting-category', [App\Http\Controllers\Product\ReportingCategoryController::class, 'destroy'])->middleware('auth')->name('product.delete-reporting-category');
+Route::get('/product/reporting-category', [App\Http\Controllers\Product\ReportingCategoryController::class, 'show'])->middleware('auth')->name('product.reporting-category');
+ 
+Route::post('/product/create-preset-group', [App\Http\Controllers\Product\PresetGroupController::class, 'store'])->middleware('auth')->name('product.create-preset-group');
+Route::post('/product/delete-preset-group', [App\Http\Controllers\Product\PresetGroupController::class, 'destroy'])->middleware('auth')->name('product.delete-preset-group');
+Route::get('/product/preset-group', [App\Http\Controllers\Product\PresetGroupController::class, 'show'])->middleware('auth')->name('product.preset-group');
   //Start of Customer Routes
 Route::get('/customer/customer',function(){
     return view('layouts.customer.customer');

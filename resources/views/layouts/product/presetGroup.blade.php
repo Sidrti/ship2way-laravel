@@ -42,19 +42,23 @@
                         </div>
                       </th>
                     
-                      <th>Preset Group</th>
-                      <th>Stores</th>
-                      <th>Manufacturer</th>
-                      <th>Brand</th>
-                      <th>Size</th>
-                      <th>Color</th>
-                      <th>Product Type Group</th>
+                      <th>Name</th>
+                      <th>Description</th>
+                      <th>Harmonization Code</th>
+                      <th>Declarated Value</th>
                       <th>Dimension</th>
                       <th>Weight</th>
+                      <th>Domestic Service</th>
+                      <th>Domestic Package</th>
+                      <th>Domestic Confirmation</th>
+                      <th>International Service</th>
+                      <th>International Package</th>
+                      <th>International Confirmation</th>
                       <th>Action</th>
                     </tr>
                   </thead>
                   <tbody>
+                    @foreach ($presetGroups as $item)
                     <tr>
                       <td>
                         <div class="form-check">
@@ -62,40 +66,29 @@
                         </div>
                       </td>
                     
-                      <td>Shirt</td>
-                      <td>Retail Store</td>
-                      <td>Densco</td>
-                      <td>Cobb</td>
-                      <td>L</td>
-                      <td>Black</td>
-                      <td>Garment</td>
-                      <td>45 x 56</td>
-                      <td>3.78gms</td>
+                      <td>{{$item->name}}</td>
+                      <td>{{$item->description}}</td>
+                      <td>{{$item->harmonization_code}}</td>
+                      <td>{{$item->declared_value}}</td>
+                      <td>{{$item->dimenion}}</td>
+                      <td>{{$item->weight}}</td>
+                      <td>{{$item->domestic_service}}</td>
+                      <td>{{$item->domestic_package}}</td>
+                      <td>{{$item->domestic_confirmation}}</td>
+                      <td>{{$item->international_service}}</td>
+                      <td>{{$item->international_package}}</td>
+                      <td>{{$item->international_confirmation}}</td>
                       <td>
-                        <span class="badge badge-warning"  data-toggle="modal" data-target="#edit_preset"><i class="fa fa-edit"></i></span>
-                        <span class="badge badge-danger"><i class="fa fa-trash"></i></span>
+                        <form action="{{route('product.delete-preset-group')}}" method="post">
+                          @csrf
+                          <input type="hidden" value="{{$item->id}}" name="id">
+                          {{-- TODO Edit  --}}
+                          <button class="badge badge-warning"  data-toggle="modal" data-target="#edit_preset"><i class="fa fa-edit"></i></button>
+                          <button class="badge badge-danger" id="delete{{$item->id}}" type="submit"><i class="fa fa-trash"></i></button>
+                        </form>  
                       </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="form-check">
-                              <input class="form-check-input" type="checkbox">
-                        </div>
-                      </td>
-                      <td>Hoodie</td>
-                      <td>Online Seller</td>
-                      <td>Densco</td>
-                      <td>Cobb</td>
-                      <td>L</td>
-                      <td>Black</td>
-                      <td>Garment</td>
-                      <td>56 x 78</td>
-                      <td>3.78gms</td>
-                      <td>
-                          <span class="badge badge-warning"  data-toggle="modal" data-target="#edit_preset"><i class="fa fa-edit"></i></span>
-                          <span class="badge badge-danger"><i class="fa fa-trash"></i></span>
-                      </td>
-                    </tr>
+                    </tr>  
+                    @endforeach
                   </tbody>
                   
                 </table>

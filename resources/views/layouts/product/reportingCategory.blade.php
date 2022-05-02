@@ -27,59 +27,26 @@
               <table id="tbUser" class="table align-items-center table-flush order-column">
               <thead class="thead-light">
                 <tr>
-                  <th>
-                    <div class="form-check mb-3">
-                          <input class="form-check-input" type="checkbox">
-                    </div>
-                  </th>
                   <th>Product Name</th>
-                  <th>Dropship</th>
-                  <th>Manufacturer</th>
-                  <th>Product Type</th>
-                  <th>Stores</th>
-                  <th>Void Products</th>
-                  <th>Fullfilment Location</th>
                   <th>Action</th>
-                  
                 </tr>
               </thead>
               <tbody>
+                @foreach ($reportingCategories as $item)
                 <tr>
+                  <td>{{$item->name}}</td>
                   <td>
-                    <div class="form-check">
-                          <input class="form-check-input" type="checkbox">
-                    </div>
+                    <form action="{{route('product.delete-reporting-category')}}" method="post">
+                      @csrf
+                      <input type="hidden" value="{{$item->id}}" name="id">
+                      {{-- TODO Edit  --}}
+                      <button class="badge badge-warning"  id="edit{{$item->id}}" data-toggle="modal" data-target="#edit_rep" type="submit"><i class="fa fa-edit"></i></button> 
+                      <button class="badge badge-danger" id="delete{{$item->id}}" type="submit"><i class="fa fa-trash"></i></button>
+                    </form>                    
                   </td>
-                  <td>Shoes</td>
-                  <td>My store</td>
-                  <td>Densco</td>
-                  <td>Footwear</td>
-                  <td>Amazon</td>
-                  <td>N/A</td>
-                  <td>N/A</td>
-                  <td>
-                    <span class="badge badge-warning"  data-toggle="modal" data-target="#edit_rep"><i class="fa fa-edit"></i></span>
-                    <span class="badge badge-danger"><i class="fa fa-trash"></i></span>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="form-check">
-                          <input class="form-check-input" type="checkbox">
-                    </div>
-                  </td>
-                  <td>Mobile</td>
-                  <td>My store</td>
-                  <td>Densco</td>
-                  <td>Home Appliances</td>
-                  <td>Ebay</td>
-                  <td>N/A</td>
-                  <td>N/A</td>
-                  <td>
-                    <span class="badge badge-warning"  data-toggle="modal" data-target="#edit_rep"><i class="fa fa-edit"></i></span>
-                    <span class="badge badge-danger"><i class="fa fa-trash"></i></span>
-                  </td>
-                </tr>
+                </tr>  
+                @endforeach
+
               </tbody>
               
               </table>
