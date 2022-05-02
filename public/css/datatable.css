@@ -1524,3 +1524,6 @@ p {
 #recent_shipments_info {
     font-size: 13px;
 }
+.table.dataTable {
+    margin: 0 0 !important;
+}

@@ -1272,136 +1272,99 @@
                 <div class="col-md-12">
                   <p>Preset Groups allow you to define default attributes that can be applied to multiple products. Any product with this "profile" will be assigned these attributes unless specifically overridden.</p>
                 </div>
-                <form>
+                <form action="{{route('product.create-preset-group')}}" method="POST">
+                  @csrf
                 <div class="col-md-12">
                     <div class="container">
                         <div class="form-row">
                           <div class="form-group col-md-12">
-                            <label for="inputCity">Preset Group Name</label>
-                            <input type="text" class="form-control" id="preset_group">
+                            <label for="preset_group">Preset Group Name</label>
+                            <input type="text" class="form-control" id="preset_group" name="name">
                           </div>
                         </div>
                         <h5>Domestic</h5>
                         <div class="form-row">
                           <div class="form-group col-md-4">
-                            
-                            <input type="email" class="form-control" id="inputCity">
+                            <input type="text" class="form-control" id="domestic_service" name="domestic_service">
                           </div>
                           <div class="form-group col-md-4">
-                           
-                            <input type="email" class="form-control" id="inputCity">
+                            <input type="text" class="form-control" id="domestic_package" name="domestic_package">
                           </div>
-                          <div class="form-group col-md-4">
-                           
-                            <input type="email" class="form-control" id="inputCity">
+                          <div class="form-group col-md-4"> 
+                            <input type="text" class="form-control" id="domestic_confirmation" name="domestic_confirmation">
                           </div>
                         </div>
                         
                         <h5>International</h5>
                         <div class="form-row">
                           <div class="form-group col-md-4">
-                            <input type="email" class="form-control" id="inputCity">
+                            <input type="text" class="form-control" id="international_service" name="international_service">
                           </div>
                           <div class="form-group col-md-4">
                             
-                            <input type="email" class="form-control" id="inputCity">
+                            <input type="text" class="form-control" id="international_package" name="international_package">
                           </div>
                           <div class="form-group col-md-4">
                             
-                            <input type="email" class="form-control" id="inputCity">
+                            <input type="text" class="form-control" id="international_confirmation" name="international_confirmation">
                           </div>
                         </div>
                             <h5>Package Weight</h5>
                             <div class="form-row">
 
                               <div class="form-group col-md-6">
-                                <label for="inputCity">(lb)</label>
-                                <input type="number" class="form-control" id="inputCity">
-                              </div>
-                              <div class="form-group col-md-6">
-                                <label for="inputState">(oz)</label>
-                                <input type="number" class="form-control" id="inputCity">
+                                <label for="inputCity">(gms)</label>
+                                <input type="number" class="form-control" id="weight" name="weight">
                               </div>
                             </div>
                             <h5>Package Dimensions</h5>
                             <div class="form-row">
                               <div class="form-group col-md-4">
-                                <label for="inputCity">L</label>
-                                <input type="number" class="form-control" id="inputCity">
+                                <label for="dimension_length">L</label>
+                                <input type="number" class="form-control" id="dimension_length" name="dimension_length">
                               </div>
                               <div class="form-group col-md-4">
                                 <label for="inputState">W</label>
-                                <input type="number" class="form-control" id="inputCity">
+                                <input type="number" class="form-control" id="dimension_width" name="dimension_width">
                               </div>
                               <div class="form-group col-md-4">
-                                <label for="inputState">H(in)</label>
-                                <input type="number" class="form-control" id="inputCity">
+                                <label for="dimension_height">H(in)</label>
+                                <input type="number" class="form-control" id="dimension_height" name="dimension_height">
                               </div>
                             </div>
 
                             <h5>Customs Declarations</h5>
                             <p>The following options will be used to create customs declarations for international shipments that contain products with this Preset Group.
                             </p>
-                            <div class="col-12">
+                            {{-- <div class="col-12">
                                 <div class="form-check">
                                 <input class="form-check-input" type="checkbox">
                                 <label class="form-check-label">
                                   Do not create customs declartions for products using this preset group
                                 </label>
                               </div>
-                            </div>
+                            </div> --}}
                            <br>  
 
                           <div class="form-row">
                             <div class="form-group col-md-6">
-                              <label for="inputCity">Description</label>
-                              <input type="text" class="form-control" id="inputCity">
+                              <label for="description">Description</label>
+                              <input type="text" class="form-control" id="description" name="description">
                             </div>
                             <div class="form-group col-md-6">
-                              <label for="inputState">Declared Value</label>
-                              <input type="text" class="form-control" id="inputCity">
-                            </div>
-                          </div>
-                          <div class="form-row">
-                            <div class="form-group col-md-6">
-                              <label for="inputCity">Type Of Store</label>
-                              <select class="form-control">
-                             
-                                <option>Retail store</option>
-                                <option>Wholesale</option>
-                                <option>Manufacturer</option>
-                                <option>Jobber</option>
-                                <option>Department store</option>
-                                <option>Supermarket</option>
-                                <option>Online seller</option>
-                             
-                              </select>
-                            </div>
-                            <div class="form-group col-md-6">
-                              <label for="inputState">Type Of Products</label>
-                              <select class="form-control">
-              
-                                <option>Garment</option>
-                                <option>Personal computer</option>
-                                <option>Consumer Electronic</option>
-                                <option>Home Décor</option>
-                                <option>Automotive</option>
-                                <option>Building & Supply</option>
-                                <option>Artificial flower</option>
-                                <option>Food & Snack, </option>
-                                
-                          </select>
+                              <label for="declared_value">Declared Value</label>
+                              <input type="text" class="form-control" id="declared_value" name="declared_value">
                             </div>
                           </div>
 
                          <div class="form-row">
                           <div class="form-group col-md-6">
-                            <label for="inputCity">Harmonization Code</label>
-                            <input type="text" class="form-control" id="inputCity">
+                            <label for="harmonization_code">Harmonization Code</label>
+                            <input type="text" class="form-control" id="harmonization_code" name="harmonization_code">
                           </div>
                           <div class="form-group col-md-6">
-                            <label for="inputState">Select Country Origin</label>
-                            <select class="form-control">
+                            <label for="origin_country">Select Country Origin</label>
+                            <select class="form-control" name="origin_country">
                                 <option>China</option>
                                 <option>Vietnam</option>
                                 <option>USA</option>
@@ -1417,7 +1380,8 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-primary add-preset">Save changes</button>
+                  {{-- class add-preset --}}
+                  <button type="submit" class="btn btn-primary">Save changes</button> 
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
                 </form>
@@ -1586,24 +1550,25 @@
                       </button>
                     </div>
                     <div class="modal-body">
+                    <form action="{{route('product.create-reporting-category')}}" method="POST">
+                        @csrf
                       <div class="container-fluid">
                         <div class="col-md-12">
                             <div class="container">
-                              <form>
                                 <div class="form-row">
                                   <div class="form-group col-md-12">
                                     <label for="inputCity">Add Product Category</label>
-                                    <input type="text" class="form-control" id="category_name">
+                                    <input type="text" class="form-control" id="name" name="name">
                                   </div>
                                 </div>
-                              </form>
                             </div>
                         </div>
                         <div class="modal-footer">
-                          <button type="button" class="btn btn-primary add-category">Save changes</button>
+                          <button type="submit" class="btn btn-primary add-category">Save changes</button>
                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         </div>
                       </div>
+                    </form>
                     </div>
                   </div>
         
